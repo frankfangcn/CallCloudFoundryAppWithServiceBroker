@@ -1,0 +1,32 @@
+---
+applications:
+- name: callapiwithsrvbroker-srvbroker
+  host: callapiwithsrvbroker-srvbroker
+  memory: 128M
+  path: /
+  services:
+    - callapiwithsrvbroker-uaa
+    - callapiwithsrvbroker-auditlog
+  health-check-type: http
+  health-check-http-endpoint: /health
+  env:
+      SBF_CATALOG_SUFFIX: fzj
+      SBF_BROKER_CREDENTIALS: >
+        {
+          "broker_user": "broker_password"
+        }
+      SBF_SERVICE_CONFIG: >
+        {
+          "callapiwithsrvbroker-srvprovider": {
+            "extend_credentials": {
+              "shared": {
+                "vendor": "SAP"
+              },
+              "per_plan": {
+                "default": {
+                  "url": "<Route defined in manifest.yml of serviceprovider>"
+                }
+              }
+            }
+          }
+        }

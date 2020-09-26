@@ -1,0 +1,11 @@
+applications:
+- name: callapiwithsrvbroker-srvprovider
+  routes:
+    - route: <provider subaccount ID>-callapiwithsrvbroker-srvprovider.<domain>
+  path: target/serviceprovider-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  memory: 1024M
+  services:
+    - callapiwithsrvbroker-uaa
+    
+    

@@ -1,0 +1,17 @@
+{
+  "services": [
+    {
+      "name": "callapiwithsrvbroker-srvprovider",
+      "description": "callapiwithsrvbroker-srvprovider",
+      "bindable": true,
+      "plans": [
+        {
+          "name": "default",
+          "description": "callapiwithsrvbroker-srvprovider plan",
+          "id": "240c1326-d380-4185-b401-cca5dc02f6a7"
+        }
+      ],
+      "id": "10e75929-cef8-4ab7-b999-556877696aeb"
+    }
+  ]
+}

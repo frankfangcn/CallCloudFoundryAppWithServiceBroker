@@ -1,0 +1,20 @@
+{
+    "xsappname": "callapiwithsrvbroker-uaa",
+    "description": "Roles for callapiwithsrvbroker",
+    "tenant-mode": "shared",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.GetConsumerToken",
+            "description": "GetConsumerToken scope"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "GetConsumerToken",
+            "description": "Role for GetConsumerToken",
+            "scope-references": [
+                "$XSAPPNAME.GetConsumerToken"
+            ]
+        }
+    ]
+}
